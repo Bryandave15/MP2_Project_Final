@@ -3,7 +3,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainDashboard from './components/projectDashboard';
 import React from 'react'; 
-import Home from './components/home'
+
 import Drawing from './pages/drawing';
 import InspectionList from './pages/inspectFinal'
 import Login from './pages/login';
@@ -14,6 +14,9 @@ import Report from './pages/reports';
 import Register from './pages/register';
 import ForgotPassword from './pages/forgotPass';
 import ProfilePage from './pages/innerpage/dashboardpages/useracoount';
+import Homepage from './newtemplate/page';
+import ReportList1 from './pages/innerpage/reports copy';
+
 
 
 
@@ -23,8 +26,8 @@ const MainComponent = () => {
   return (
     <BrowserRouter>
         <Routes>
-            <Route path="/" element={<MainDashboard />} />
-            <Route path="home" element={<Home />} />
+            <Route path="presamp" element={<MainDashboard />} />
+         
             <Route path="inspection" element={<InspectionList />} /> 
             <Route path="drawing" element={<Drawing />} />  
             <Route path="login" element={<Login />} /> 
@@ -36,6 +39,9 @@ const MainComponent = () => {
             <Route path="register" element={<Register />} />
             <Route path="forgot-password" element={<ForgotPassword />} />
             <Route path="profile-page" element={<ProfilePage />} />
+            <Route path="/" element={<Homepage />} />
+            <Route path="riport" element={<ReportList1 />} />
+    
 
             
         </Routes>

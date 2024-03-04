@@ -4,9 +4,7 @@ import { Container } from 'react-bootstrap';
 
 const PersonalProfile = () => {
   return (
-    <Container className="" style={{ backgroundColor: '#f4f5f7' }}>
-
-      
+    <Container >
        
             <MDBCard className="mb-3" style={{ borderRadius: '.5rem' }}>
               <MDBRow className="g-0">

@@ -131,7 +131,8 @@ const Structural = () => {
   };
 
   return (
-    <div className='container-fluid'>
+    <main className='main-container'> 
+  
     
 
       <Container className='mb-3' >
@@ -247,7 +248,7 @@ const Structural = () => {
         
       </Container>
       </Container>
-    </div>
+      </main>
   );
 };
 

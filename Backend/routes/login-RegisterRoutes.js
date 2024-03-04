@@ -40,6 +40,10 @@ router.post('/login-validation/', (req, res) => {
     }
 });
 
+const newUserDB = [
+
+]
+
 // Registration endpoint
 router.post('/registration', (req, res) => {
     // Extract data from request body
@@ -51,7 +55,7 @@ router.post('/registration', (req, res) => {
     let confirmPassword = req.body.confirmPassword;
 
     // Generate an ID for the new user
-    let id = userDB.length + 1;
+    let id = newUserDB.length + 1;
 
     // Create a new user object
     const newUser = {
@@ -66,14 +70,19 @@ router.post('/registration', (req, res) => {
     };
 
     // Push the new user object to the userDB array
-    userDB.push(newUser);
+    newUserDB.push(newUser);
 
     // Respond with a success message and the updated userDB array
     res.status(200).json({
         code: "success",
         msg: "Registration successful",
-        regUser: userDB
+        regUser: newUserDB
     });
 });
+
+// read
+router.get('/get-reguser-data', (req, res) => {
+    res.json(newUserDB);  
+ })
 
 module.exports = router;

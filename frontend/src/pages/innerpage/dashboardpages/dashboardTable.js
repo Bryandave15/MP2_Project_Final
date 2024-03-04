@@ -55,10 +55,10 @@ const DashboardTable = () => {
   ];
 
   return (
-    <Container>
+    <Container >
+      <h3 className='text-center text-dark bg-warning 'style={{ borderBottom: '2px solid black' }}> Latest Added</h3>
       <BootstrapTable
         bootstrap5
-        
         classes='text-center table-striped '
         keyField="id"
         data={data}

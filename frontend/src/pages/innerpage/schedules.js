@@ -130,9 +130,7 @@ const ScheduleItem = () => {
   };
 
   return (
-    <div className='container-fluid'>
-    
-
+    <main className='main-container'> 
       <Container className='mb-3' >
         
           <Container className='mb-3' style={{ borderBottom: '2px solid black' }}>
@@ -254,7 +252,7 @@ const ScheduleItem = () => {
         
       </Container>
       </Container>
-    </div>
+    </main>
   );
 };
 

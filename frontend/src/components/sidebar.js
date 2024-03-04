@@ -35,8 +35,9 @@ const Sidebar = () => {
             <span className="ml-2"> Drawing / Plans</span>
           </Link>
           <hr className="bg-light my-1" />
+
         </li>
-       
+            
         <li>
           <Link to="/inspection" className="text-decoration-none d-block py-2 text-light">
             <FontAwesomeIcon icon={faSearch} size="lg" />

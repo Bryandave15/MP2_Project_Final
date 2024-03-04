@@ -131,8 +131,8 @@ const Asbuilt = () => {
   };
 
   return (
-    <div className='container-fluid'>
-    
+    <main className='main-container'> 
+  
 
       <Container className='mb-3' >
         
@@ -247,7 +247,7 @@ const Asbuilt = () => {
         
       </Container>
       </Container>
-    </div>
+      </main>
   );
 };
 

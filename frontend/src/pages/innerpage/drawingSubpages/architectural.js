@@ -129,7 +129,8 @@ const Architectural = () => {
   };
 
   return (
-    <div className='container-fluid'>
+    <main className='main-container'> 
+    
     
 
       <Container className='mb-3' >
@@ -243,7 +244,7 @@ const Architectural = () => {
         
       </Container>
       </Container>
-    </div>
+      </main>
   );
 };
 

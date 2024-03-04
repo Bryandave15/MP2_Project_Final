@@ -8,8 +8,8 @@ const SearchComponent = () => {
   const [showModal, setShowModal] = useState(false); 
 
 // Function to handle search
-const handleSearch = () => {
-   
+const handleSearch = (event) => {
+  event.preventDefault();
     if (!searchTerm.trim()) return; // search empty dont proceed
   
     setSearching(true); 
@@ -84,8 +84,8 @@ const handleSearch = () => {
   };
   return (
     <Container >
-      <Form className='d-flex' >
-        <Form.Group controlId="searchForm " onSubmit={handleSearch} >
+      <Form className='d-flex' onSubmit={handleSearch} >
+        <Form.Group controlId="searchForm " >
           <Form.Control
             type="text"
             placeholder="Enter search term"
@@ -93,8 +93,8 @@ const handleSearch = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </Form.Group>
-        <Button variant="primary" onClick={handleSearch} disabled={searching}>
-          {searching ? 'Searching' : 'Search'}
+        <Button variant="primary" type='submit' disabled={searching}>
+          {searching ? 'Searching...' : 'Search'} 
         </Button>
       </Form>
 

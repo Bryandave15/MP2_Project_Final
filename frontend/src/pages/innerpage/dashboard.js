@@ -13,16 +13,9 @@ const Dashboard = () => {
         <DashboardCard />
       </Container>
       <Container>
-      <CardGroup>
-      <Card className="text-center">
-        <Card.Header>Newly Added</Card.Header>
-        <Card.Body>
-          <Card.Title style={{ borderBottom: '2px solid black' }}>Latest Added from Tools</Card.Title>
+          <Container> latest added</Container>
           <DashboardTable />
-        </Card.Body>
-      
-      </Card>
-      </CardGroup>
+ 
       </Container>
     </div>
 

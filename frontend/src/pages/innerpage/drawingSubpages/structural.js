@@ -144,12 +144,9 @@ const Structural = () => {
   };
 
   return (
-    <div className='container-fluid'>
-    
-
+    <main className='main-container'> 
       <Container className='mb-3' >
-        
-          <Container className='mb-3' style={{ borderBottom: '2px solid black' }}>
+          <Container className='mb-3' style={{ borderBottom: '2px solid light' }}>
         <Stack direction='horizontal' gap={3}>
           <div className='p-2'>
             <h3> Drawings</h3>
@@ -201,12 +198,12 @@ const Structural = () => {
                     <td>{item.trade}</td>
                     <td>
                     
-{item.uploadFiles && (
-    <a href={`http://localhost:5000/download-file/${encodeURIComponent(item.uploadFiles)}`} download>
-        {item.uploadFiles}
-    </a>
-)}
-              
+                        {item.uploadFiles && (
+                            <a href={`http://localhost:5000/download-file/${encodeURIComponent(item.uploadFiles)}`} download>
+                                {item.uploadFiles}
+                            </a>
+                        )}
+                                      
                     </td>
                     <td className=''>
                      
@@ -277,7 +274,7 @@ const Structural = () => {
         
       </Container>
       </Container>
-    </div>
+      </main>
   );
 };
 

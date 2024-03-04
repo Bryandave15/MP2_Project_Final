@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react'
+import 
+ {BsFillBellFill, BsFillEnvelopeFill, BsPersonCircle, BsSearch, BsJustify}
+ from 'react-icons/bs'
+ import { useNavigate } from 'react-router-dom';
 import { Navbar, Form, Nav, NavDropdown, Container, Button, Modal } from 'react-bootstrap';
-import SearchComponent from './searchbar';
+import SearchComponent from '../components/searchbar';
 import { Link } from 'react-router-dom';
 import PersonalProfile from '../pages/innerpage/dashboardpages/useracoount';
 
-const Header = () => {
+const NewHeader = ({OpenSidebar}) => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false); // State to manage modal visibility
 
@@ -17,26 +20,28 @@ const Header = () => {
     navigate('/login');
   };
 
-  return (
-    <Navbar bg="dark" variant="dark" expand="lg" className="py-2">
-      <Container>
-        <Navbar.Brand href="#home">Project Dashboard</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-around align-items-center">
-          <Form inline className="mb-2 mb-lg-0 ">
-            <Nav className="container-fluid">
-              <SearchComponent />
-            </Nav>
-          </Form>
-          <Nav className="ml-2">
-            <Button onClick={() => setShowModal(true)}>User Account</Button>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
 
-      {/* Modal component */}
+
+
+  return (
+    <header className='header d-flex justify-content-around' >
+        <div className='menu-icon' >
+            <BsJustify className='icon' onClick={OpenSidebar}/>
+        </div>
+        <div className='header-left'>
+              <SearchComponent />
+        </div>
+        <div className='header-right'>
+           <Nav className="ml-2">
+           <Button onClick={() => setShowModal(true)} className="border-0 bg-transparent p-0">
+            <img src={"https://images7.alphacoders.com/111/1112855.jpg"} alt="User Profile" style={{ width: 48, height: 42, borderRadius: '50%', filter: '90%' }} />
+          </Button>
+          </Nav>
+        </div>
+
+        {/* Modal component */}
       <Modal show={showModal} onHide={() => setShowModal(false)} dialogClassName="modal-dialog modal-dialog-end">
-        <Modal.Header closeButton className='bg-info'>
+        <Modal.Header closeButton className='bg-secondary text-dark'>
           <Modal.Title>User Account</Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -48,6 +53,7 @@ const Header = () => {
             <span className="ml-2"> Change Passowrd</span>
           </Link>
           </Button>
+          
           <Button onClick={logoutUser} variant="outline-none" className='border-none bg-danger'>Logout</Button>
           </Container>
           
@@ -58,8 +64,8 @@ const Header = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-    </Navbar>
-  );
-};
+    </header>
+  )
+}
 
-export default Header;
+export default NewHeader

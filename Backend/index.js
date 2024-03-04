@@ -14,6 +14,7 @@ const mefpsRoutes = require('./routes/drawingroutes/mefpsRoutes')
 const reportRoutes = require ('./routes/reportRoutes')
 
 
+
 app.use(express.urlencoded({ extended:true })) //for form submission
 app.use(express.json()) //json response
 app.use(
@@ -25,6 +26,7 @@ app.use(
 // login routes
 app.post('/login-validation', loginRegisterRoutes);
 app.post('/registration', loginRegisterRoutes);
+app.get('/get-reguser-data', loginRegisterRoutes);
 
 // meeting routes
 app.post('/save-meeting', meetingRoutes);
@@ -85,6 +87,7 @@ app.put('/update-report/:reportId', reportRoutes);
 app.get('/get-report-data', reportRoutes);
 app.get('/get-report/:id', reportRoutes);
 app.delete('/delete-report/:reportId', reportRoutes);
+
 
 
     

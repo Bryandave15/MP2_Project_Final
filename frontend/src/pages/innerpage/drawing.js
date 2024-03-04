@@ -10,6 +10,7 @@ const DrawingList = () => {
  
 
   return (
+    <main className='main-container'>
     <Tabs
       defaultActiveKey="profile"
       id="fill-tab-example"
@@ -29,6 +30,7 @@ const DrawingList = () => {
         <Asbuilt />
       </Tab>
     </Tabs>
+    </main>
   );
 };
 

@@ -48,7 +48,7 @@ const Register = () => {
           console.log(data)
           alert(data.msg);
           event.target.reset();
-          navigate('/login');
+          // navigate('/login');
         } else {
           alert(data.msg);
         }
@@ -116,7 +116,7 @@ const Register = () => {
                 </div>
                 <Container>
                   <Link to="/login" className="text-decoration-none d-block p-2 text-dark text-center mt-4">
-                    <span className="ml-2"> Already have account?</span>
+                    <span className="ml-2"> Return to login page..</span>
                   </Link>
                 </Container>
               </form>

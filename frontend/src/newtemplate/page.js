@@ -1,9 +1,11 @@
 import { useState } from 'react'
-import NewHeader from '../newtemplate/header'
-import NewSidebar from '../newtemplate/sidebar'
-import ReportList from './innerpage/reports'
+import './new.css'
+import NewHeader from './header'
+import NewSidebar from './sidebar'
+import ScheduleItem from '../pages/innerpage/schedules'
+import Home from './homepage'
 
-const Meeting = () => {
+const Homepage = () => {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
 
   const OpenSidebar = () => {
@@ -14,9 +16,9 @@ const Meeting = () => {
     <div className='grid-container'>
       <NewHeader OpenSidebar={OpenSidebar}/>
       <NewSidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
-      <ReportList />
+      <Home />
     </div>
   )
 }
 
-export default Meeting
+export default Homepage

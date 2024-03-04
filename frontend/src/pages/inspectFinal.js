@@ -1,16 +1,21 @@
 // Dashboard.js
 
 import React from 'react';
-import Sidebar from '../components/sidebar';
-import Header from '../components/header';
+import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col } from 'react-bootstrap';
-
+import NewHeader from '../newtemplate/header';
+import NewSidebar from '../newtemplate/sidebar';
 import { useNavigate } from 'react-router-dom';
 import { useEffect,} from 'react';
 import InspectionList from './innerpage/inspection'
 
 const Todo = () => {
+
+  const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
+
+  const OpenSidebar = () => {
+    setOpenSidebarToggle(!openSidebarToggle)
+  }
 
   var navigate = useNavigate(); 
   useEffect( ()=>{
@@ -24,18 +29,11 @@ const Todo = () => {
   }, []); 
 
   return (
-    <Container fluid className="p-0">
-      <Header />
-      
-      <Row className="flex-grow-1 m-0">
-        <Col lg={2} className="bg-light sidebar p-0" style={{ height: '100vh', overflowY: 'auto' }}>
-          <Sidebar />
-        </Col>
-        <Col lg={10} className="content p-3 mx-auto" style={{ height: '100vh', overflowY: 'auto' }}>
-          <InspectionList />
-        </Col>
-      </Row>
-    </Container>
+    <div className='grid-container'>
+      <NewHeader OpenSidebar={OpenSidebar}/>
+      <NewSidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
+      <InspectionList />
+    </div>
   );
 };
 

@@ -119,7 +119,8 @@ const MeetingList = () => {
     };
 
     return (
-        <div className='container-fluid'>
+        <main className='main-container'> 
+      
             <Container className='mb-3' style={{ borderBottom: '2px solid black' }}>
                 <Stack direction='horizontal' gap={3} className=''>
                     <div className='p-2'>
@@ -300,7 +301,7 @@ const MeetingList = () => {
                     </Button>
                 </Modal.Footer>
             </Modal>
-        </div>
+            </main>
     );
 };
 

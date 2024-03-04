@@ -136,7 +136,9 @@ const ReportList = () => {
   };
 
   return (
-    <div className='container-fluid'>
+
+    <main className='main-container'> 
+    
     
 
       <Container className='mb-3' >
@@ -259,7 +261,7 @@ const ReportList = () => {
         
       </Container>
       </Container>
-    </div>
+      </main>
   );
 };
 

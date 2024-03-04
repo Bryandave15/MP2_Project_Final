@@ -137,7 +137,8 @@ const InspectionList = () => {
   };
 
   return (
-    <div className='container-fluid'>
+    <main className='main-container'> 
+  
       <Container className='mb-3' style={{ borderBottom: '2px solid black' }}>
         <Stack direction='horizontal' gap={3}>
           <div className='p-2'>
@@ -289,7 +290,7 @@ const InspectionList = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-    </div>
+      </main>
   );
 };
 
